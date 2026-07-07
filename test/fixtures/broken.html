@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Broken Dashboard</title>
+<style>
+  body { font-family: system-ui; margin: 0; }
+  .overflow-row { width: 300px; white-space: nowrap; overflow-x: hidden; }
+  .overflow-row span { display: inline-block; width: 900px; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Dashboard</h1>
+    <button id="checkout" disabled>Checkout</button>
+    <button id="icon-only"><svg width="16" height="16"></svg></button>
+    <div class="overflow-row" data-testid="sidebar"><span>very wide content that overflows its container box</span></div>
+  </main>
+  <script>
+    // A failing API call, then code that assumes it succeeded — the canonical
+    // "network failure -> runtime TypeError" chain the normalizer should link.
+    fetch('/api/cart')
+      .then((r) => r.json())
+      .then((cart) => { document.title = cart.items.length + ' items'; }) // throws: cart is not what we expect
+      .catch((e) => { throw new Error('Cannot read cart from /api/cart: ' + e.message); });
+  </script>
+</body>
+</html>
