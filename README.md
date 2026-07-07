@@ -1,5 +1,7 @@
 # web-observe
 
+[![CI](https://github.com/russfranky/web-observe/actions/workflows/ci.yml/badge.svg)](https://github.com/russfranky/web-observe/actions/workflows/ci.yml)
+
 The semantic layer above browser instrumentation. Turns raw browser
 observations — console errors, network failures, DOM/accessibility state — into
 a **single causal, source-linked explanation** an AI coding agent can act on,
