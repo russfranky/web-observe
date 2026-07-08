@@ -1,6 +1,6 @@
 ---
 name: web-observe
-description: Diagnose a broken/misbehaving web page by causal, source-linked evidence instead of a screenshot. Use when a local web app shows an error, a blank/unrendered view, a disabled/unclickable control, a failing API, or a layout break, and you want the root cause (which console error, caused by which network failure, at which source line) rather than pixels. Runs standalone on Playwright. Complements chrome-devtools-mcp (raw signals) by correlating them; complements ocr-check (pixels for non-Chrome/visual). Requires the ~/web-observe repo + chromium.
+description: Diagnose a broken local web page by causal, source-linked evidence (which console error, caused by which network failure, at which source line) instead of a screenshot. Use for a web app showing an error, blank view, dead control, failing API, or layout break. Runs on Playwright; needs ~/web-observe + chromium.
 ---
 
 # web-observe — causal web diagnosis
